@@ -50,6 +50,7 @@
 
 /* ── Black & white theme ── */
 :root {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
   --background: oklch(1 0 0);
   --foreground: oklch(0 0 0);
 
@@ -101,9 +102,11 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip; /* clip, not hidden — hidden creates a scroll container which breaks position:sticky */
   }
   html {
     @apply font-sans scroll-smooth;
+    overflow-x: clip;
   }
 }
 

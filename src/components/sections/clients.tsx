@@ -1,48 +1,18 @@
 "use client";
 
-const clients = [
-  "TechStart",
-  "StyleHub",
-  "LearnPro",
-  "GreenVentures",
-  "DataFlow",
-  "CloudSphere",
-  "NexaRetail",
-  "Buildify",
-  "HealthLink",
-  "FinEdge",
-  "OmniCommerce",
-  "SwiftApps",
-];
+import { BrandScroller, BrandScrollerReverse } from "@/components/ui/brand-scoller";
 
 export function Clients() {
-  const doubled = [...clients, ...clients];
-
   return (
-    <section className="py-14 relative overflow-hidden border-y border-[#e5e5e5] bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
+    <section className="py-12 relative overflow-hidden border-t border-[#e5e5e5] bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-6">
         <p className="text-center text-xs font-semibold text-[#777] uppercase tracking-widest">
           Trusted by teams worldwide
         </p>
       </div>
-
-      <div className="relative">
-        {/* Fade edges */}
-        <div className="absolute left-0 top-0 bottom-0 w-24 sm:w-40 bg-linear-to-r from-white to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 sm:w-40 bg-linear-to-l from-white to-transparent z-10 pointer-events-none" />
-
-        <div className="flex gap-5 w-max animate-marquee">
-          {[...doubled, ...doubled].map((name, i) => (
-            <div
-              key={`${name}-${i}`}
-              className="flex items-center justify-center px-7 py-3 rounded-xl border border-[#e5e5e5] bg-[#fafafa] whitespace-nowrap min-w-32.5"
-            >
-              <span className="text-sm font-semibold text-[#555] tracking-wide">
-                {name}
-              </span>
-            </div>
-          ))}
-        </div>
+      <div className="flex flex-col gap-4">
+        <BrandScroller />
+        <BrandScrollerReverse />
       </div>
     </section>
   );

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { TextRotate } from "@/components/ui/text-rotate";
 
 const perks = [
   "Free consultation",
@@ -17,10 +18,18 @@ const stats = [
   { value: "24/7", label: "Worldwide Support" },
 ];
 
+const rotatingTexts = [
+  "Your Business",
+  "Your Vision",
+  "Your Growth",
+  "Startups",
+  "Enterprises",
+];
+
 export function Hero() {
   return (
     <section className="relative min-h-[92vh] flex items-center overflow-hidden bg-[#fafafa]">
-      {/* Background image — subtle */}
+      {/* Background */}
       <div className="absolute inset-0">
         <Image
           src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1920&q=80"
@@ -29,29 +38,40 @@ export function Hero() {
           className="object-cover opacity-[0.06]"
           priority
         />
-        {/* Dot grid */}
-        <div className="absolute inset-0 bg-[radial-gradient(rgba(125,59,113,0.07)_1px,transparent_1px)] bg-[size:28px_28px]" />
-        {/* Soft purple orbs */}
+        <div className="absolute inset-0 bg-[radial-gradient(rgba(0,0,0,0.05)_1px,transparent_1px)] bg-[size:28px_28px]" />
         <div className="absolute top-1/4 -left-40 w-[500px] h-[500px] bg-[#777]/15 rounded-full blur-[140px]" />
         <div className="absolute bottom-1/3 -right-40 w-[500px] h-[500px] bg-[#000]/10 rounded-full blur-[140px]" />
-        {/* Bottom fade to page bg */}
         <div className="absolute bottom-0 left-0 right-0 h-48 bg-linear-to-t from-[#fafafa] to-transparent" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full py-24 lg:py-0">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Status badge */}
+          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#000]/25 bg-[#000]/8 text-xs font-semibold text-[#000] mb-8 animate-fade-in-up">
             <span className="h-1.5 w-1.5 rounded-full bg-[#000] animate-pulse-slow" />
             Available for new projects
           </div>
 
-          {/* Heading */}
+          {/* Heading with TextRotate */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.08] mb-6 animate-fade-in-up [animation-delay:80ms]">
             <span className="gradient-text">Custom Software</span>
             <br />
-            <span className="text-[#000]">Built for</span>{" "}
-            <span className="gradient-text-cyan">Your Business</span>
+            <span className="text-[#000]">Built for </span>
+            <span className="inline-flex overflow-hidden gradient-text-cyan">
+              <TextRotate
+                texts={rotatingTexts}
+                rotationInterval={2500}
+                staggerDuration={0.025}
+                staggerFrom="first"
+                splitBy="characters"
+                initial={{ y: "100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: "-120%", opacity: 0 }}
+                transition={{ type: "spring", damping: 28, stiffness: 300 }}
+                mainClassName="justify-center"
+                splitLevelClassName="overflow-hidden"
+              />
+            </span>
           </h1>
 
           {/* Subheading */}
@@ -61,7 +81,7 @@ export function Hero() {
             Based in Bangalore. Serving clients worldwide.
           </p>
 
-          {/* Perks row */}
+          {/* Perks */}
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 mb-10 animate-fade-in-up [animation-delay:220ms]">
             {perks.map((perk) => (
               <span
