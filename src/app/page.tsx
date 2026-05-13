@@ -11,7 +11,7 @@ import { Industries } from "@/components/sections/industries";
 import { Process } from "@/components/sections/process";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Blog } from "@/components/sections/blog";
-import { Careers } from "@/components/sections/careers";
+// import { Careers } from "@/components/sections/careers";
 import { CTA } from "@/components/sections/cta";
 import { Contact } from "@/components/sections/contact";
 
@@ -31,7 +31,7 @@ export default function Home() {
         <Process />
         <Testimonials />
         <Blog />
-        <Careers />
+        {/* <Careers /> */}
         <CTA />
         <Contact />
       </main>

@@ -6,11 +6,11 @@ import { ArrowRight, Calendar } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="py-28 lg:py-36 relative bg-[#FAF4F9]">
+    <section className="py-28 lg:py-36 relative bg-[#fafafa]">
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-[#C99BC1]/40 animate-fade-in-up shadow-2xl shadow-[#7D3B71]/15">
+        <div className="relative overflow-hidden rounded-3xl border border-[#aaa]/40 animate-fade-in-up shadow-2xl shadow-[#000]/15">
           {/* Background image */}
           <div className="absolute inset-0">
             <Image
@@ -22,9 +22,9 @@ export function CTA() {
           </div>
 
           {/* Purple gradient overlay */}
-          <div className="absolute inset-0 bg-linear-to-br from-[#7D3B71] via-[#4A1440] to-[#33092B]" />
-          <div className="absolute top-0 right-0 w-96 h-96 bg-[#96568B]/30 rounded-full blur-[128px]" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#B076A5]/20 rounded-full blur-[128px]" />
+          <div className="absolute inset-0 bg-linear-to-br from-[#000] via-[#111] to-[#000]" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#555]/30 rounded-full blur-[128px]" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#777]/20 rounded-full blur-[128px]" />
           {/* Dot pattern */}
           <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] bg-size-[24px_24px]" />
 
@@ -36,10 +36,10 @@ export function CTA() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6">
               Let&apos;s Build Something
               <br />
-              <span className="text-[#E3D3E0]">Extraordinary.</span>
+              <span className="text-[#e5e5e5]">Extraordinary.</span>
             </h2>
 
-            <p className="text-[#C99BC1] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+            <p className="text-[#aaa] text-lg max-w-xl mx-auto mb-10 leading-relaxed">
               We don&apos;t offer one-size-fits-all pricing. Every project gets a
               custom solution based on your goals, timeline, and budget. Book a
               free 30-minute call — no commitment required.
@@ -48,13 +48,13 @@ export function CTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 href="#contact"
-                className="inline-flex items-center gap-2 bg-white text-[#7D3B71] font-bold px-7 py-3.5 rounded-full hover:bg-[#FAF4F9] transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm"
+                className="inline-flex items-center gap-2 bg-white text-[#000] font-bold px-7 py-3.5 rounded-full hover:bg-[#fafafa] transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm"
               >
                 <Calendar size={16} />
                 Book a Free Consultation
                 <ArrowRight size={15} />
               </Link>
-              <p className="text-sm text-[#C99BC1]">Flexible, transparent pricing</p>
+              <p className="text-sm text-[#aaa]">Flexible, transparent pricing</p>
             </div>
           </div>
         </div>

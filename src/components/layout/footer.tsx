@@ -55,13 +55,13 @@ const footerLinks = {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#E3D3E0] bg-[#FAF4F9]">
+    <footer className="border-t border-[#e5e5e5] bg-[#fafafa]">
       {/* Pre-footer CTA strip */}
-      <div className="border-b border-[#E3D3E0] bg-white">
+      <div className="border-b border-[#e5e5e5] bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-lg font-bold text-[#33092B] mb-1">Experience the difference.</p>
-            <p className="text-sm text-[#96568B]">Let&apos;s build something great together.</p>
+            <p className="text-lg font-bold text-[#000] mb-1">Experience the difference.</p>
+            <p className="text-sm text-[#555]">Let&apos;s build something great together.</p>
           </div>
           <Link href="#contact" className="btn-primary shrink-0">
             Schedule a demo <ArrowRight size={14} />
@@ -74,12 +74,12 @@ export function Footer() {
           {/* Brand column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 mb-5">
-              <div className="h-8 w-8 rounded-lg bg-[#7D3B71] flex items-center justify-center shadow-[0_0_12px_rgba(125,59,113,0.3)]">
+              <div className="h-8 w-8 rounded-lg bg-[#000] flex items-center justify-center shadow-[0_0_12px_rgba(125,59,113,0.3)]">
                 <span className="text-white font-bold text-sm">MB</span>
               </div>
-              <span className="text-base font-bold tracking-tight text-[#33092B]">Minute Books</span>
+              <span className="text-base font-bold tracking-tight text-[#000]">Minute Books</span>
             </Link>
-            <p className="text-sm text-[#96568B] leading-relaxed mb-6 max-w-xs">
+            <p className="text-sm text-[#555] leading-relaxed mb-6 max-w-xs">
               Transforming ideas into reality. We build custom digital solutions that empower brands in the digital era — from Bangalore to the world.
             </p>
             <div className="flex gap-3">
@@ -88,7 +88,7 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="h-9 w-9 rounded-lg border border-[#E3D3E0] bg-white flex items-center justify-center text-[#96568B] hover:text-[#7D3B71] hover:border-[#C99BC1] hover:bg-[#F0E4EE] transition-colors"
+                  className="h-9 w-9 rounded-lg border border-[#e5e5e5] bg-white flex items-center justify-center text-[#555] hover:text-[#000] hover:border-[#aaa] hover:bg-[#f5f5f5] transition-colors"
                 >
                   {svg}
                 </a>
@@ -99,11 +99,11 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h3 className="text-xs font-bold uppercase tracking-widest mb-4 text-[#7D3B71]">{title}</h3>
+              <h3 className="text-xs font-bold uppercase tracking-widest mb-4 text-[#000]">{title}</h3>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-[#96568B] hover:text-[#33092B] transition-colors font-medium">
+                    <Link href={link.href} className="text-sm text-[#555] hover:text-[#000] transition-colors font-medium">
                       {link.label}
                     </Link>
                   </li>
@@ -114,16 +114,16 @@ export function Footer() {
         </div>
 
         {/* Contact row */}
-        <div className="mt-12 pt-8 border-t border-[#E3D3E0] grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+        <div className="mt-12 pt-8 border-t border-[#e5e5e5] grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
           {[
             { icon: Mail, value: "Vishwatechmania@gmail.com", href: "mailto:Vishwatechmania@gmail.com" },
             { icon: Phone, value: "+91 6374810499", href: "tel:+916374810499" },
             { icon: MapPin, value: "Bangalore, India", href: null },
           ].map((item) => (
-            <div key={item.value} className="flex items-center gap-2.5 text-sm text-[#96568B]">
-              <item.icon size={14} className="shrink-0 text-[#7D3B71]" />
+            <div key={item.value} className="flex items-center gap-2.5 text-sm text-[#555]">
+              <item.icon size={14} className="shrink-0 text-[#000]" />
               {item.href ? (
-                <a href={item.href} className="hover:text-[#33092B] transition-colors truncate font-medium">{item.value}</a>
+                <a href={item.href} className="hover:text-[#000] transition-colors truncate font-medium">{item.value}</a>
               ) : (
                 <span className="font-medium">{item.value}</span>
               )}
@@ -132,14 +132,14 @@ export function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-[#E3D3E0]">
-          <p className="text-xs text-[#B076A5]">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-[#e5e5e5]">
+          <p className="text-xs text-[#777]">
             &copy; {new Date().getFullYear()} Minute Books. All rights reserved.
           </p>
-          <div className="flex gap-5 text-xs text-[#B076A5]">
-            <Link href="#" className="hover:text-[#7D3B71] transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-[#7D3B71] transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-[#7D3B71] transition-colors">Cookie Policy</Link>
+          <div className="flex gap-5 text-xs text-[#777]">
+            <Link href="#" className="hover:text-[#000] transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-[#000] transition-colors">Terms of Service</Link>
+            <Link href="#" className="hover:text-[#000] transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

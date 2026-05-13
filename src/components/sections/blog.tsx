@@ -33,14 +33,14 @@ const posts = [
 
 export function Blog() {
   return (
-    <section id="blog" className="py-28 lg:py-36 relative bg-[#FAF4F9]">
+    <section id="blog" className="py-28 lg:py-36 relative bg-[#fafafa]">
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 animate-fade-in-up">
           <div>
             <span className="tag-pill mb-4 inline-block">From the Blog</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#33092B]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#000]">
               Insights & Guides
             </h2>
           </div>
@@ -53,7 +53,7 @@ export function Blog() {
           {posts.map((post, i) => (
             <article
               key={post.title}
-              className="group flex flex-col rounded-2xl border border-[#E3D3E0] bg-white overflow-hidden hover:border-[#C99BC1] hover:shadow-lg hover:shadow-[#7D3B71]/10 transition-all duration-300 animate-fade-in-up"
+              className="group flex flex-col rounded-2xl border border-[#e5e5e5] bg-white overflow-hidden hover:border-[#aaa] hover:shadow-lg hover:shadow-[#000]/10 transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="relative h-48 overflow-hidden">
@@ -63,25 +63,25 @@ export function Blog() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-[#33092B]/30 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#000]/30 to-transparent" />
                 <div className="absolute top-4 left-4">
                   <span className="tag-pill text-xs">{post.category}</span>
                 </div>
               </div>
 
               <div className="flex flex-col flex-1 p-6">
-                <h3 className="font-bold text-base leading-snug mb-3 text-[#33092B] group-hover:text-[#7D3B71] transition-colors">
+                <h3 className="font-bold text-base leading-snug mb-3 text-[#000] group-hover:text-[#000] transition-colors">
                   {post.title}
                 </h3>
-                <p className="text-sm text-[#96568B] leading-relaxed mb-5 flex-1">{post.excerpt}</p>
-                <div className="flex items-center justify-between pt-4 border-t border-[#E3D3E0]">
-                  <div className="flex items-center gap-2 text-xs text-[#B076A5]">
+                <p className="text-sm text-[#555] leading-relaxed mb-5 flex-1">{post.excerpt}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-[#e5e5e5]">
+                  <div className="flex items-center gap-2 text-xs text-[#777]">
                     <Clock size={11} />
                     {post.readTime}
                     <span className="mx-1">·</span>
                     {post.date}
                   </div>
-                  <Link href="#blog" className="inline-flex items-center gap-1 text-xs text-[#7D3B71] hover:text-[#632558] font-semibold transition-colors">
+                  <Link href="#blog" className="inline-flex items-center gap-1 text-xs text-[#000] hover:text-[#222] font-semibold transition-colors">
                     Read <ArrowRight size={11} />
                   </Link>
                 </div>

@@ -19,9 +19,9 @@ export function Clients() {
   const doubled = [...clients, ...clients];
 
   return (
-    <section className="py-14 relative overflow-hidden border-y border-[#E3D3E0] bg-white">
+    <section className="py-14 relative overflow-hidden border-y border-[#e5e5e5] bg-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8">
-        <p className="text-center text-xs font-semibold text-[#B076A5] uppercase tracking-widest">
+        <p className="text-center text-xs font-semibold text-[#777] uppercase tracking-widest">
           Trusted by teams worldwide
         </p>
       </div>
@@ -35,9 +35,9 @@ export function Clients() {
           {[...doubled, ...doubled].map((name, i) => (
             <div
               key={`${name}-${i}`}
-              className="flex items-center justify-center px-7 py-3 rounded-xl border border-[#E3D3E0] bg-[#FAF4F9] whitespace-nowrap min-w-32.5"
+              className="flex items-center justify-center px-7 py-3 rounded-xl border border-[#e5e5e5] bg-[#fafafa] whitespace-nowrap min-w-32.5"
             >
-              <span className="text-sm font-semibold text-[#96568B] tracking-wide">
+              <span className="text-sm font-semibold text-[#555] tracking-wide">
                 {name}
               </span>
             </div>
