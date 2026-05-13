@@ -1,7 +1,10 @@
 "use client";
 
+import Image from "next/image";
 import { Globe, Smartphone, Layout, Bug, Database, Bot, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import techImg from "@/Images/technology 2.png";
+import rect5 from "@/Images/Rectangle 5.png";
 
 const services = [
   {
@@ -115,6 +118,34 @@ export function Services() {
           <Link href="#contact" className="btn-outline inline-flex">
             Discuss your project <ArrowRight size={15} />
           </Link>
+        </div>
+
+        {/* Technology showcase banner */}
+        <div className="mt-20 grid lg:grid-cols-2 gap-8 items-center rounded-3xl border border-[#e5e5e5] bg-[#fafafa] overflow-hidden animate-fade-in-up [animation-delay:600ms]">
+          <div className="p-8 lg:p-12">
+            <span className="tag-pill mb-4 inline-block">Our Stack</span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-[#000] mb-3">
+              Built with modern, battle-tested technology
+            </h3>
+            <p className="text-[#555] text-sm leading-relaxed mb-6">
+              Every tool we choose is production-proven, well-maintained, and selected to give your product a long-term competitive edge.
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {["Next.js", "React", "Node.js", "TypeScript", "PostgreSQL", "AWS"].map((t) => (
+                <span key={t} className="px-3 py-1 rounded-full text-xs border border-[#e5e5e5] bg-white text-[#555] font-medium">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="relative h-64 lg:h-full min-h-[240px]">
+            <Image src={techImg} alt="Technology stack" fill className="object-cover" />
+            <div className="absolute inset-0 bg-linear-to-r from-[#fafafa] via-transparent to-transparent lg:from-transparent" />
+            {/* Floating rect5 accent */}
+            <div className="absolute bottom-4 right-4 w-20 h-20 rounded-xl overflow-hidden border-2 border-white shadow-lg -rotate-6 hidden lg:block">
+              <Image src={rect5} alt="" fill className="object-cover" />
+            </div>
+          </div>
         </div>
       </div>
     </section>

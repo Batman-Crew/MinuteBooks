@@ -1,6 +1,8 @@
 "use client";
 
+import Image from "next/image";
 import { Phone, FileText, Code2, PackageCheck } from "lucide-react";
+import helpImg from "@/Images/help-desktop-small-ac17139030bd6ceb35da7e7c39764c3b567db454a8bdc23ea305d2e93aad28ef.jpg.png";
 
 const steps = [
   {
@@ -55,6 +57,19 @@ export function Process() {
           <p className="text-[#555] text-lg max-w-xl mx-auto">
             Simple. Clear. Focused on results. Four steps from idea to a live product.
           </p>
+        </div>
+
+        {/* Help desktop visual */}
+        <div className="relative mb-14 rounded-2xl overflow-hidden shadow-xl border border-[#e5e5e5] animate-fade-in-up [animation-delay:100ms]">
+          <Image
+            src={helpImg}
+            alt="Project dashboard preview"
+            className="w-full object-cover max-h-72"
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-[#fafafa]/80 via-transparent to-transparent" />
+          <div className="absolute bottom-5 left-6">
+            <span className="tag-pill text-xs">Live project dashboard</span>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">

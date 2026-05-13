@@ -3,6 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
+import rect12201 from "@/Images/Rectangle 12201.png";
+import rect2588 from "@/Images/Rectangle 2588.png";
 
 export function CTA() {
   return (
@@ -14,11 +16,19 @@ export function CTA() {
           {/* Background image */}
           <div className="absolute inset-0">
             <Image
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80"
+              src={rect2588}
               alt="Office workspace"
               fill
-              className="object-cover opacity-[0.08]"
+              className="object-cover opacity-[0.12]"
             />
+          </div>
+
+          {/* Floating project thumbnails */}
+          <div className="absolute top-6 left-6 w-24 h-16 rounded-xl overflow-hidden opacity-30 rotate-3 hidden lg:block">
+            <Image src={rect12201} alt="" fill className="object-cover" />
+          </div>
+          <div className="absolute bottom-6 right-6 w-24 h-16 rounded-xl overflow-hidden opacity-30 -rotate-3 hidden lg:block">
+            <Image src={rect12201} alt="" fill className="object-cover" />
           </div>
 
           {/* Purple gradient overlay */}

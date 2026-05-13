@@ -1,6 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { Rocket, ShoppingCart, GraduationCap, Heart, PenTool, User } from "lucide-react";
+import img14 from "@/Images/Rectangle 141714.png";
+import img15 from "@/Images/Rectangle 141715.png";
+import img16 from "@/Images/Rectangle 141716.png";
+import img17 from "@/Images/Rectangle 141717.png";
+import img18 from "@/Images/Rectangle 141718.png";
+import img19 from "@/Images/Rectangle 141719.png";
+
+const galleryImages = [img14, img15, img16, img17, img18, img19];
 
 const industries = [
   {
@@ -78,6 +87,28 @@ export function Industries() {
               <p className="text-sm text-[#555] leading-relaxed">{industry.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Scrolling image strip */}
+        <div className="mt-16 animate-fade-in-up [animation-delay:500ms]">
+          <p className="text-center text-xs text-[#aaa] font-medium uppercase tracking-widest mb-5">
+            Real work. Real results.
+          </p>
+          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
+            {galleryImages.map((img, i) => (
+              <div
+                key={i}
+                className="relative aspect-square rounded-xl overflow-hidden border border-[#e5e5e5] shadow-sm hover:shadow-md transition-shadow duration-300 group"
+              >
+                <Image
+                  src={img}
+                  alt={`Project screenshot ${i + 1}`}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

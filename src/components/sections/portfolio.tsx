@@ -1,15 +1,25 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight, ExternalLink } from "lucide-react";
+import proj1 from "@/Images/Rectangle 141708.png";
+import proj2 from "@/Images/Rectangle 141709.png";
+import proj3 from "@/Images/Rectangle 141710.png";
 
-const projects = [
+const projects: {
+  title: string;
+  category: string;
+  description: string;
+  image: StaticImageData;
+  tags: string[];
+  result: string;
+}[] = [
   {
     title: "LearnPro Academy",
     category: "EdTech Platform",
     description: "A full-featured LMS with live classes, course builder, payment integration, and student analytics dashboard serving 10,000+ learners.",
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+    image: proj1,
     tags: ["Next.js", "Node.js", "PostgreSQL", "Stripe"],
     result: "3× increase in course completions",
   },
@@ -17,7 +27,7 @@ const projects = [
     title: "StyleHub E-commerce",
     category: "Retail & E-commerce",
     description: "End-to-end e-commerce platform with AI-powered recommendations, inventory management, and real-time order tracking for a fashion brand.",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80",
+    image: proj2,
     tags: ["React Native", "Firebase", "Shopify API", "OpenAI"],
     result: "Online sales grew 3× in 6 months",
   },
@@ -25,7 +35,7 @@ const projects = [
     title: "DataFlow Analytics",
     category: "SaaS Dashboard",
     description: "Real-time business intelligence dashboard with custom visualizations, automated reports, and multi-tenant architecture for B2B clients.",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80",
+    image: proj3,
     tags: ["React", "Python", "Redis", "AWS"],
     result: "Reduced reporting time by 80%",
   },

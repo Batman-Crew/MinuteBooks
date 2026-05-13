@@ -1,15 +1,25 @@
 "use client";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { ArrowRight, Clock } from "lucide-react";
+import blog1 from "@/Images/Rectangle 141711.png";
+import blog2 from "@/Images/Rectangle 141712.png";
+import blog3 from "@/Images/Rectangle 141713.png";
 
-const posts = [
+const posts: {
+  category: string;
+  title: string;
+  excerpt: string;
+  image: StaticImageData;
+  readTime: string;
+  date: string;
+}[] = [
   {
     category: "Web Development",
     title: "Why Next.js 16 Is a Game-Changer for Production Apps",
     excerpt: "Server Components, Turbopack, and the new App Router have fundamentally changed how we think about building performant web applications.",
-    image: "https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?auto=format&fit=crop&w=700&q=80",
+    image: blog1,
     readTime: "5 min read",
     date: "May 8, 2026",
   },
@@ -17,7 +27,7 @@ const posts = [
     category: "AI & Automation",
     title: "Building Production-Ready AI Chatbots with LangChain & OpenAI",
     excerpt: "A practical guide to integrating LLM-powered chatbots into your SaaS product — covering context management, fallbacks, and cost control.",
-    image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=700&q=80",
+    image: blog2,
     readTime: "8 min read",
     date: "Apr 28, 2026",
   },
@@ -25,7 +35,7 @@ const posts = [
     category: "Mobile",
     title: "React Native vs Flutter in 2026: An Honest Comparison",
     excerpt: "After building 15+ cross-platform apps in both frameworks, here is our unfiltered take on performance, developer experience, and ecosystem maturity.",
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=700&q=80",
+    image: blog3,
     readTime: "6 min read",
     date: "Apr 15, 2026",
   },

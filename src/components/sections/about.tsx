@@ -3,6 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, Code2, Lightbulb, Rocket, Users } from "lucide-react";
+import aboutImg1 from "@/Images/Rectangle 141720.png";
+import aboutImg2 from "@/Images/Rectangle 141721.png";
+import aboutImg3 from "@/Images/Rectangle 141722.png";
+import techImg from "@/Images/technology 2.png";
 
 const values = [
   {
@@ -55,22 +59,34 @@ export function About() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image */}
+          {/* Image collage */}
           <div className="relative animate-fade-in-left order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden aspect-4/3 shadow-xl shadow-[#000]/12">
-              <Image
-                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=900&q=80"
-                alt="Minute Books team collaborating"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-linear-to-br from-[#000]/15 to-[#111]/10" />
+            <div className="grid grid-cols-2 gap-3">
+              {/* Tall left image */}
+              <div className="relative rounded-2xl overflow-hidden row-span-2 h-80 shadow-lg">
+                <Image src={aboutImg1} alt="Project work" fill className="object-cover" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#000]/20 to-transparent" />
+              </div>
+              {/* Top right image */}
+              <div className="relative rounded-2xl overflow-hidden h-[152px] shadow-lg">
+                <Image src={aboutImg2} alt="Team collaboration" fill className="object-cover" />
+              </div>
+              {/* Bottom right — tech image */}
+              <div className="relative rounded-2xl overflow-hidden h-[152px] shadow-lg">
+                <Image src={aboutImg3} alt="Technology stack" fill className="object-cover" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#000]/20 to-transparent" />
+              </div>
             </div>
 
             {/* Floating badge */}
             <div className="absolute -bottom-6 -right-4 sm:-right-6 bg-white border border-[#e5e5e5] rounded-2xl px-5 py-4 shadow-lg shadow-[#000]/10">
               <p className="text-2xl font-bold text-[#000]">5+ Years</p>
               <p className="text-xs text-[#555] mt-0.5">Building great products</p>
+            </div>
+
+            {/* Tech floating thumbnail */}
+            <div className="absolute -top-5 -left-5 w-20 h-20 rounded-xl overflow-hidden border-2 border-white shadow-lg rotate-3">
+              <Image src={techImg} alt="Technology" fill className="object-cover" />
             </div>
 
             <div className="absolute -top-10 -left-10 w-48 h-48 bg-[#777]/15 rounded-full blur-3xl pointer-events-none" />
