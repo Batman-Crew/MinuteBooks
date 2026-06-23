@@ -1,6 +1,6 @@
 "use client";
 
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { MapPin, Send } from "lucide-react";
 
 const socialLinks = [
   {
@@ -52,8 +52,6 @@ export function Contact() {
           {/* Info panel */}
           <div className="lg:col-span-2 animate-fade-in-left space-y-8">
             {[
-              { icon: Mail, label: "Email", value: "Vishwatechmania@gmail.com", href: "mailto:Vishwatechmania@gmail.com" },
-              { icon: Phone, label: "Phone", value: "+91 6374810499", href: "tel:+916374810499" },
               { icon: MapPin, label: "Location", value: "Bangalore, India — worldwide", href: null },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4">

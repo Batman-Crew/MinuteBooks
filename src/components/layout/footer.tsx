@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight } from "lucide-react";
 
 const socialLinks = [
   {
@@ -116,8 +116,6 @@ export function Footer() {
         {/* Contact row */}
         <div className="mt-12 pt-8 border-t border-[#e5e5e5] grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
           {[
-            { icon: Mail, value: "Vishwatechmania@gmail.com", href: "mailto:Vishwatechmania@gmail.com" },
-            { icon: Phone, value: "+91 6374810499", href: "tel:+916374810499" },
             { icon: MapPin, value: "Bangalore, India", href: null },
           ].map((item) => (
             <div key={item.value} className="flex items-center gap-2.5 text-sm text-[#555]">

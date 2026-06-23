@@ -124,7 +124,7 @@ export function Careers() {
                   </div>
                 </div>
                 <Link
-                  href={`mailto:Vishwatechmania@gmail.com?subject=Application for ${job.title}`}
+                  href="#contact"
                   className="btn-primary text-sm shrink-0 self-start sm:self-center"
                 >
                   Apply Now <ArrowRight size={14} />
@@ -135,10 +135,11 @@ export function Careers() {
         </div>
 
         <p className="text-center text-[#555] text-sm mt-10 animate-fade-in-up">
-          Don&apos;t see a fit? Send your resume to{" "}
-          <a href="mailto:Vishwatechmania@gmail.com" className="text-[#000] hover:text-[#222] font-semibold hover:underline transition-colors">
-            Vishwatechmania@gmail.com
-          </a>
+          Don&apos;t see a fit?{" "}
+          <a href="#contact" className="text-[#000] hover:text-[#222] font-semibold hover:underline transition-colors">
+            Get in touch
+          </a>{" "}
+          and send us your resume.
         </p>
       </div>
     </section>
