@@ -104,7 +104,7 @@ export function Pricing() {
                   ))}
                 </ul>
 
-                <Magnetic strength={0.2} className="block w-full">
+                <Magnetic className="block w-full">
                   <a
                     href="#contact"
                     className={`flex items-center justify-center gap-2 w-full py-3 rounded-full text-sm font-semibold transition-all ${

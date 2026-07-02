@@ -1,13 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowRight, Calendar } from "lucide-react";
 import { BlurReveal } from "@/components/ui/blur-reveal";
 import { Magnetic } from "@/components/ui/magnetic-button";
 
 export function CTA() {
   return (
-    <section id="contact" className="py-28 lg:py-36 relative bg-[#faf8fd]">
+    <section className="py-28 lg:py-36 relative bg-[#faf8fd]">
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -40,25 +39,27 @@ export function CTA() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Magnetic>
-                  <Link
-                    href="#pricing"
+                  <a
+                    href="mailto:minutebooksofficial@gmail.com"
                     className="inline-flex items-center gap-2 bg-white text-[#170b33] font-bold px-7 py-3.5 rounded-full hover:bg-[#faf8fd] transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm"
                   >
                     Start Free Trial
                     <ArrowRight size={15} />
-                  </Link>
+                  </a>
                 </Magnetic>
-                <Magnetic strength={0.25}>
-                  <Link
-                    href="#contact-form"
+                <Magnetic>
+                  <a
+                    href="mailto:minutebooksofficial@gmail.com"
                     className="inline-flex items-center gap-2 border border-white/25 text-white font-semibold px-7 py-3.5 rounded-full hover:bg-white/10 transition-all text-sm"
                   >
                     <Calendar size={16} />
                     Book Demo
-                  </Link>
+                  </a>
                 </Magnetic>
               </div>
-              <p className="text-sm text-[#a695c2] mt-6">No credit card required · Cancel anytime</p>
+              <p className="text-sm text-[#a695c2] mt-6">
+                No credit card required · Cancel anytime · <a href="mailto:minutebooksofficial@gmail.com" className="underline hover:text-white transition-colors">minutebooksofficial@gmail.com</a>
+              </p>
             </div>
           </div>
         </BlurReveal>

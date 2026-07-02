@@ -39,7 +39,6 @@ const footerLinks = {
   Product: [
     { href: "#features", label: "Features" },
     { href: "#dashboard", label: "Dashboard Demo" },
-    { href: "#pricing", label: "Pricing" },
     { href: "#industries", label: "Industries" },
   ],
   Modules: [
@@ -78,7 +77,7 @@ export function Footer() {
               placeholder="you@business.com"
               className="w-full bg-transparent text-sm text-[#170b33] placeholder:text-[#a695c2] outline-none px-1"
             />
-            <Magnetic strength={0.2}>
+            <Magnetic>
               <button type="submit" className="btn-primary py-2 px-4 text-xs shrink-0">
                 Subscribe
               </button>
@@ -132,10 +131,19 @@ export function Footer() {
 
         {/* Contact row */}
         <div className="mt-12 pt-8 border-t border-[#e4dbf5] grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-          {[{ icon: MapPin, value: "Bangalore, India", href: null }].map((item) => (
+          {[
+            { icon: MapPin, value: "Bangalore, India", href: null },
+            { icon: Mail, value: "minutebooksofficial@gmail.com", href: "mailto:minutebooksofficial@gmail.com" },
+          ].map((item) => (
             <div key={item.value} className="flex items-center gap-2.5 text-sm text-[#5d4483]">
               <item.icon size={14} className="shrink-0 text-[#170b33]" />
-              <span className="font-medium">{item.value}</span>
+              {item.href ? (
+                <a href={item.href} className="hover:text-[#170b33] transition-colors font-medium truncate">
+                  {item.value}
+                </a>
+              ) : (
+                <span className="font-medium">{item.value}</span>
+              )}
             </div>
           ))}
         </div>

@@ -10,7 +10,6 @@ const rows = [
   { label: "POS + Inventory + Payroll in one place", mb: true, erp: true, excel: false },
   { label: "Automatic bank reconciliation", mb: true, erp: "partial", excel: false },
   { label: "Mobile access", mb: true, erp: "partial", excel: false },
-  { label: "Cost for a growing business", mb: "₹", erp: "₹₹₹₹", excel: "Free (but costly in time)" },
   { label: "Human error risk", mb: "Low", erp: "Medium", excel: "High" },
 ];
 
@@ -18,7 +17,7 @@ function Cell({ value }: { value: boolean | string }) {
   if (value === true) return <Check size={16} className="text-[#1E9E5A] mx-auto" />;
   if (value === false) return <X size={16} className="text-[#E0554F] mx-auto" />;
   if (value === "partial") return <Minus size={16} className="text-[#B8860B] mx-auto" />;
-  return <span className="text-xs text-[#170b33] font-medium">{value}</span>;
+  return <span className="text-[10px] sm:text-xs text-[#170b33] font-medium leading-snug">{value}</span>;
 }
 
 export function WhyUs() {
@@ -38,13 +37,13 @@ export function WhyUs() {
 
         <BlurReveal delay={0.1}>
           <div className="rounded-3xl border border-[#e4dbf5] bg-[#F8F9FC] overflow-hidden shadow-xl shadow-[#6C3BFF]/8">
-            <div className="grid grid-cols-4 text-center">
+            <div className="grid grid-cols-[1.3fr_1fr_1fr_1fr] sm:grid-cols-4 text-center">
               <div />
-              <div className="relative py-5 bg-linear-to-b from-[#6C3BFF] to-[#8B5CF6] text-white font-heading font-bold text-sm sm:text-base rounded-t-2xl -mx-px">
+              <div className="relative py-3 sm:py-5 px-1 bg-linear-to-b from-[#6C3BFF] to-[#8B5CF6] text-white font-heading font-bold text-[11px] sm:text-base rounded-t-2xl -mx-px">
                 Minute Books
               </div>
-              <div className="py-5 text-[#170b33] font-semibold text-sm sm:text-base">Traditional ERP</div>
-              <div className="py-5 text-[#170b33] font-semibold text-sm sm:text-base">Excel Sheets</div>
+              <div className="py-3 sm:py-5 px-1 text-[#170b33] font-semibold text-[11px] sm:text-base">Traditional ERP</div>
+              <div className="py-3 sm:py-5 px-1 text-[#170b33] font-semibold text-[11px] sm:text-base">Excel Sheets</div>
             </div>
 
             {rows.map((row, i) => (
@@ -54,12 +53,12 @@ export function WhyUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="grid grid-cols-4 items-center border-t border-[#e4dbf5] bg-white"
+                className="grid grid-cols-[1.3fr_1fr_1fr_1fr] sm:grid-cols-4 items-center border-t border-[#e4dbf5] bg-white"
               >
-                <div className="py-4 pl-5 pr-2 text-xs sm:text-sm text-[#170b33] font-medium">{row.label}</div>
-                <div className="py-4 text-center bg-[#F8F9FC]/60"><Cell value={row.mb} /></div>
-                <div className="py-4 text-center"><Cell value={row.erp} /></div>
-                <div className="py-4 text-center"><Cell value={row.excel} /></div>
+                <div className="py-4 pl-3 sm:pl-5 pr-1 sm:pr-2 text-[11px] sm:text-sm text-[#170b33] font-medium leading-snug">{row.label}</div>
+                <div className="py-4 px-1 text-center bg-[#F8F9FC]/60"><Cell value={row.mb} /></div>
+                <div className="py-4 px-1 text-center"><Cell value={row.erp} /></div>
+                <div className="py-4 px-1 text-center"><Cell value={row.excel} /></div>
               </motion.div>
             ))}
           </div>

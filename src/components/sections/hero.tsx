@@ -162,22 +162,22 @@ export function Hero() {
               className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-14"
             >
               <Magnetic>
-                <Link href="#pricing" className="btn-primary">
+                <Link href="#contact" className="btn-primary">
                   Start Free Trial
                   <ArrowRight size={15} />
                 </Link>
               </Magnetic>
-              <Magnetic strength={0.25}>
+              <Magnetic>
                 <Link href="#contact" className="btn-outline">
                   Book a Demo
                 </Link>
               </Magnetic>
-              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.96 }} className="group flex items-center gap-2 text-sm font-semibold text-[#170b33]">
+              {/* <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.96 }} className="group flex items-center gap-2 text-sm font-semibold text-[#170b33]">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white shadow-md shadow-[#6C3BFF]/15 transition-transform group-hover:scale-110">
                   <PlayCircle size={16} className="text-[#6C3BFF]" />
                 </span>
                 Watch Demo
-              </motion.button>
+              </motion.button> */}
             </motion.div>
 
             <motion.div

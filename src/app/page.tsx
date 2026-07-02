@@ -11,6 +11,7 @@ import { Clients } from "@/components/sections/clients";
 import { Pricing } from "@/components/sections/pricing";
 import { FAQ } from "@/components/sections/faq";
 import { CTA } from "@/components/sections/cta";
+import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -23,11 +24,12 @@ export default function Home() {
         <WhyUs />
         <Industries />
         <Stats />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Clients />
-        <Pricing />
+        {/* <Pricing /> */}
         <FAQ />
         <CTA />
+        <Contact />
       </main>
       <Footer />
     </>

@@ -159,7 +159,7 @@ export function Features() {
         </div>
 
         <BlurReveal className="text-center mt-16">
-          <a href="#pricing" className="btn-outline inline-flex">
+          <a href="#contact" className="btn-outline inline-flex">
             See all modules <ArrowRight size={15} />
           </a>
         </BlurReveal>
@@ -271,16 +271,17 @@ function GSTMock() {
   const stages = ["GSTR-1", "GSTR-3B", "e-Invoice", "Filed"];
   return (
     <div>
-      <div className="flex items-center justify-between mb-6">
+      <div className="relative flex items-start justify-between mb-6">
+        {/* Connector track, aligned to the vertical center of the circles */}
+        <div className="absolute top-3.5 left-0 right-0 h-0.5 bg-[#EDE7FF]" />
+        <div className="absolute top-3.5 left-0 h-0.5 bg-[#6C3BFF]" style={{ width: "66%" }} />
+
         {stages.map((s, i) => (
-          <div key={s} className="flex-1 flex items-center">
-            <div className="flex flex-col items-center gap-1.5 flex-1">
-              <div className={`h-7 w-7 rounded-full flex items-center justify-center text-[10px] font-bold ${i < 3 ? "bg-[#6C3BFF] text-white" : "bg-[#EDE7FF] text-[#6C3BFF]"}`}>
-                {i + 1}
-              </div>
-              <span className="text-[9px] text-[#7c6699] text-center">{s}</span>
+          <div key={s} className="relative z-10 flex flex-col items-center gap-1.5 w-1/4 px-0.5">
+            <div className={`h-7 w-7 shrink-0 rounded-full flex items-center justify-center text-[10px] font-bold ${i < 3 ? "bg-[#6C3BFF] text-white" : "bg-[#EDE7FF] text-[#6C3BFF]"}`}>
+              {i + 1}
             </div>
-            {i < stages.length - 1 && <div className="h-0.5 flex-1 bg-[#EDE7FF] -mt-4" />}
+            <span className="text-[8px] sm:text-[9px] text-[#7c6699] text-center leading-tight whitespace-nowrap">{s}</span>
           </div>
         ))}
       </div>

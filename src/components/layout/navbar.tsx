@@ -10,7 +10,6 @@ const navLinks = [
   { href: "#features", label: "Features" },
   { href: "#dashboard", label: "Solutions" },
   { href: "#industries", label: "Industries" },
-  { href: "#pricing", label: "Pricing" },
   { href: "#faq", label: "Resources" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
@@ -62,8 +61,8 @@ export function Navbar() {
 
             {/* CTA */}
             <div className="flex items-center gap-3">
-              <Magnetic strength={0.25}>
-                <Link href="#pricing" className="btn-primary text-sm py-2 px-5">
+              <Magnetic>
+                <Link href="#contact" className="btn-primary text-sm py-2 px-5">
                   Get Started
                 </Link>
               </Magnetic>
@@ -123,7 +122,7 @@ export function Navbar() {
                   Login
                 </Link>
                 <Link
-                  href="#pricing"
+                  href="#contact"
                   onClick={() => setMobileOpen(false)}
                   className="btn-primary w-full justify-center text-sm"
                 >
