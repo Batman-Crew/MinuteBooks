@@ -43,14 +43,14 @@ const projects: {
 
 export function Portfolio() {
   return (
-    <section id="portfolio" className="py-28 lg:py-36 relative bg-[#fafafa]">
+    <section id="portfolio" className="py-28 lg:py-36 relative bg-[#faf8fd]">
       <div className="section-divider absolute top-0 left-0 right-0" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 animate-fade-in-up">
           <div>
             <span className="tag-pill mb-4 inline-block">Our Work</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#000]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#170b33]">
               Case Studies
             </h2>
           </div>
@@ -63,7 +63,7 @@ export function Portfolio() {
           {projects.map((project, i) => (
             <div
               key={project.title}
-              className="group flex flex-col rounded-2xl border border-[#e5e5e5] bg-white overflow-hidden hover:border-[#aaa] hover:shadow-lg hover:shadow-[#000]/10 transition-all duration-300 animate-fade-in-up"
+              className="group flex flex-col rounded-2xl border border-[#e4dbf5] bg-white overflow-hidden hover:border-[#a695c2] hover:shadow-lg hover:shadow-[#170b33]/10 transition-all duration-300 animate-fade-in-up"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               <div className="relative h-52 overflow-hidden">
@@ -73,25 +73,25 @@ export function Portfolio() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-linear-to-t from-[#000]/40 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-[#170b33]/40 via-transparent to-transparent" />
                 <div className="absolute top-4 left-4">
                   <span className="tag-pill text-xs">{project.category}</span>
                 </div>
               </div>
 
               <div className="flex flex-col flex-1 p-6">
-                <h3 className="font-bold text-lg mb-2 text-[#000]">{project.title}</h3>
-                <p className="text-sm text-[#555] leading-relaxed mb-4 flex-1">{project.description}</p>
+                <h3 className="font-bold text-lg mb-2 text-[#170b33]">{project.title}</h3>
+                <p className="text-sm text-[#5d4483] leading-relaxed mb-4 flex-1">{project.description}</p>
                 <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tags.map((tag) => (
-                    <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs border border-[#e5e5e5] bg-[#fafafa] text-[#555]">
+                    <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs border border-[#e4dbf5] bg-[#faf8fd] text-[#5d4483]">
                       {tag}
                     </span>
                   ))}
                 </div>
-                <div className="flex items-center justify-between pt-4 border-t border-[#e5e5e5]">
-                  <span className="text-xs font-semibold text-[#000]">✦ {project.result}</span>
-                  <Link href="#contact" className="inline-flex items-center gap-1 text-xs text-[#555] hover:text-[#000] transition-colors font-medium">
+                <div className="flex items-center justify-between pt-4 border-t border-[#e4dbf5]">
+                  <span className="text-xs font-semibold text-[#170b33]">✦ {project.result}</span>
+                  <Link href="#contact" className="inline-flex items-center gap-1 text-xs text-[#5d4483] hover:text-[#170b33] transition-colors font-medium">
                     Details <ExternalLink size={11} />
                   </Link>
                 </div>

@@ -1,6 +1,24 @@
 "use client";
 
-import { BsAmazon, BsGoogle, BsSpotify, BsYoutube } from "react-icons/bs";
+import {
+  BsWhatsapp,
+  BsEnvelope,
+  BsUpcScan,
+  BsPrinter,
+  BsCreditCard,
+  BsQrCode,
+  BsBank,
+} from "react-icons/bs";
+
+const integrations = [
+  { Icon: BsQrCode, name: "UPI" },
+  { Icon: BsWhatsapp, name: "WhatsApp" },
+  { Icon: BsEnvelope, name: "Email" },
+  { Icon: BsUpcScan, name: "Barcode" },
+  { Icon: BsBank, name: "GST Network" },
+  { Icon: BsPrinter, name: "Thermal Printer" },
+  { Icon: BsCreditCard, name: "Payment Gateway" },
+];
 
 export const BrandScroller = () => {
   return (
@@ -12,22 +30,12 @@ export const BrandScroller = () => {
             className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row"
             key={i}
           >
-            <div className="flex items-center w-28 gap-3">
-              <BsSpotify size={24} />
-              <p className="text-lg font-semibold opacity-80">Spotify</p>
-            </div>
-            <div className="flex items-center w-28 gap-3">
-              <BsYoutube size={24} />
-              <p className="text-lg font-semibold opacity-80">YouTube</p>
-            </div>
-            <div className="flex items-center w-28 gap-3">
-              <BsAmazon size={24} />
-              <p className="text-lg font-semibold opacity-80">Amazon</p>
-            </div>
-            <div className="flex items-center w-28 gap-3">
-              <BsGoogle size={24} />
-              <p className="text-lg font-semibold opacity-80">Google</p>
-            </div>
+            {integrations.map(({ Icon, name }) => (
+              <div key={name} className="flex items-center gap-3 rounded-full border border-[#e4dbf5] bg-white px-5 py-2.5 shadow-sm shadow-[#6C3BFF]/8">
+                <Icon size={20} className="text-[#6C3BFF]" />
+                <p className="text-sm font-semibold text-[#170b33] whitespace-nowrap">{name}</p>
+              </div>
+            ))}
           </div>
         ))}
     </div>
@@ -44,22 +52,12 @@ export const BrandScrollerReverse = () => {
             className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee-reverse flex-row"
             key={i}
           >
-            <div className="flex items-center w-28 gap-3">
-              <BsSpotify size={24} />
-              <p className="text-lg font-semibold opacity-80">Spotify</p>
-            </div>
-            <div className="flex items-center w-28 gap-3">
-              <BsYoutube size={24} />
-              <p className="text-lg font-semibold opacity-80">YouTube</p>
-            </div>
-            <div className="flex items-center w-28 gap-3">
-              <BsAmazon size={24} />
-              <p className="text-lg font-semibold opacity-80">Amazon</p>
-            </div>
-            <div className="flex items-center w-28 gap-3">
-              <BsGoogle size={24} />
-              <p className="text-lg font-semibold opacity-80">Google</p>
-            </div>
+            {integrations.map(({ Icon, name }) => (
+              <div key={name} className="flex items-center gap-3 rounded-full border border-[#e4dbf5] bg-white px-5 py-2.5 shadow-sm shadow-[#6C3BFF]/8">
+                <Icon size={20} className="text-[#A343FC]" />
+                <p className="text-sm font-semibold text-[#170b33] whitespace-nowrap">{name}</p>
+              </div>
+            ))}
           </div>
         ))}
     </div>

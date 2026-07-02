@@ -1,114 +1,65 @@
 "use client";
 
-import Image from "next/image";
-import { Rocket, ShoppingCart, GraduationCap, Heart, PenTool, User } from "lucide-react";
-import img14 from "@/Images/Rectangle 141714.png";
-import img15 from "@/Images/Rectangle 141715.png";
-import img16 from "@/Images/Rectangle 141716.png";
-import img17 from "@/Images/Rectangle 141717.png";
-import img18 from "@/Images/Rectangle 141718.png";
-import img19 from "@/Images/Rectangle 141719.png";
-
-const galleryImages = [img14, img15, img16, img17, img18, img19];
+import {
+  Utensils,
+  Store,
+  Scissors,
+  ShoppingBasket,
+  Stethoscope,
+  Warehouse,
+  Factory,
+  Cpu,
+  Shirt,
+  Car,
+} from "lucide-react";
+import { motion } from "motion/react";
+import { BlurReveal } from "@/components/ui/blur-reveal";
 
 const industries = [
-  {
-    icon: Rocket,
-    title: "Startups & Tech Companies",
-    description: "MVPs, prototypes, and scalable platforms to launch and grow your startup fast.",
-    iconBg: "bg-[#000]/10 group-hover:bg-[#000]/18",
-    iconColor: "text-[#000]",
-  },
-  {
-    icon: ShoppingCart,
-    title: "E-commerce & Retail",
-    description: "End-to-end e-commerce solutions with payments, inventory, and analytics.",
-    iconBg: "bg-[#555]/10 group-hover:bg-[#555]/18",
-    iconColor: "text-[#555]",
-  },
-  {
-    icon: GraduationCap,
-    title: "EdTech & E-Learning",
-    description: "LMS platforms, course builders, and interactive learning experiences at scale.",
-    iconBg: "bg-emerald-500/10 group-hover:bg-emerald-500/18",
-    iconColor: "text-emerald-600",
-  },
-  {
-    icon: Heart,
-    title: "Non-Profits & NGOs",
-    description: "Affordable digital tools to amplify your mission and reach more people.",
-    iconBg: "bg-rose-500/10 group-hover:bg-rose-500/18",
-    iconColor: "text-rose-600",
-  },
-  {
-    icon: PenTool,
-    title: "Creators & Portfolios",
-    description: "Stunning personal sites and creator tools that showcase your best work.",
-    iconBg: "bg-amber-500/10 group-hover:bg-amber-500/18",
-    iconColor: "text-amber-600",
-  },
-  {
-    icon: User,
-    title: "Solo Entrepreneurs",
-    description: "Custom tools and platforms to automate, sell, and scale your solo business.",
-    iconBg: "bg-[#222]/10 group-hover:bg-[#222]/18",
-    iconColor: "text-[#222]",
-  },
+  { icon: Utensils, name: "Restaurant" },
+  { icon: Store, name: "Retail" },
+  { icon: Scissors, name: "Salon" },
+  { icon: ShoppingBasket, name: "Supermarket" },
+  { icon: Stethoscope, name: "Medical" },
+  { icon: Warehouse, name: "Wholesale" },
+  { icon: Factory, name: "Manufacturing" },
+  { icon: Cpu, name: "Electronics" },
+  { icon: Shirt, name: "Garments" },
+  { icon: Car, name: "Automobile" },
 ];
 
 export function Industries() {
   return (
-    <section id="industries" className="py-28 lg:py-36 relative bg-white">
+    <section id="industries" className="py-28 lg:py-36 relative bg-[#F8F9FC] overflow-hidden">
       <div className="section-divider absolute top-0 left-0 right-0" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-[#777]/8 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-[#8B5CF6]/8 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <span className="tag-pill mb-4 inline-block">Who We Serve</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#000] mb-4">
-            Focus Industries
+        <BlurReveal className="text-center mb-16">
+          <span className="tag-pill mb-4 inline-block">Perfect for every business</span>
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#170b33] mb-4">
+            Built for your industry, out of the box.
           </h2>
-          <p className="text-[#555] text-lg max-w-xl mx-auto">
-            Start simple, scale smart. We work with businesses and creators at every stage of growth.
+          <p className="text-[#5d4483] text-lg max-w-xl mx-auto">
+            Pre-configured workflows for the businesses that run India.
           </p>
-        </div>
+        </BlurReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {industries.map((industry, i) => (
-            <div
-              key={industry.title}
-              className="group relative overflow-hidden rounded-2xl border border-[#e5e5e5] bg-[#fafafa] p-7 hover:border-[#aaa] hover:shadow-md hover:shadow-[#000]/8 transition-all duration-300 animate-fade-in-up"
-              style={{ animationDelay: `${i * 80}ms` }}
-            >
-              <div className={`h-11 w-11 rounded-xl ${industry.iconBg} flex items-center justify-center mb-5 transition-colors duration-300`}>
-                <industry.icon size={20} className={industry.iconColor} />
-              </div>
-              <h3 className="font-bold mb-2 text-[#000]">{industry.title}</h3>
-              <p className="text-sm text-[#555] leading-relaxed">{industry.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Scrolling image strip */}
-        <div className="mt-16 animate-fade-in-up [animation-delay:500ms]">
-          <p className="text-center text-xs text-[#aaa] font-medium uppercase tracking-widest mb-5">
-            Real work. Real results.
-          </p>
-          <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-            {galleryImages.map((img, i) => (
-              <div
-                key={i}
-                className="relative aspect-square rounded-xl overflow-hidden border border-[#e5e5e5] shadow-sm hover:shadow-md transition-shadow duration-300 group"
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          {industries.map((ind, i) => (
+            <BlurReveal key={ind.name} delay={i * 0.05}>
+              <motion.div
+                whileHover={{ y: -6, rotate: -1 }}
+                transition={{ type: "spring", stiffness: 300, damping: 18 }}
+                className="group flex flex-col items-center justify-center gap-3 rounded-2xl border border-[#e4dbf5] bg-white p-6 text-center glass-card-hover cursor-default"
               >
-                <Image
-                  src={img}
-                  alt={`Project screenshot ${i + 1}`}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#6C3BFF]/10 group-hover:bg-linear-to-br group-hover:from-[#6C3BFF] group-hover:to-[#A343FC] transition-colors duration-300">
+                  <ind.icon size={22} className="text-[#6C3BFF] group-hover:text-white transition-colors duration-300" />
+                </span>
+                <span className="font-semibold text-sm text-[#170b33]">{ind.name}</span>
+              </motion.div>
+            </BlurReveal>
+          ))}
         </div>
       </div>
     </section>

@@ -40,10 +40,10 @@ export function Contact() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in-up">
           <span className="tag-pill mb-4 inline-block">Get in Touch</span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#000] mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#170b33] mb-4">
             Let&apos;s Start a Conversation
           </h2>
-          <p className="text-[#555] text-lg max-w-xl mx-auto">
+          <p className="text-[#5d4483] text-lg max-w-xl mx-auto">
             Have a project in mind? Reach out and we&apos;ll respond within 24 hours.
           </p>
         </div>
@@ -56,17 +56,17 @@ export function Contact() {
               { icon: MapPin, label: "Location", value: "Bangalore, India — worldwide", href: null },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4">
-                <div className="h-11 w-11 rounded-xl bg-[#000]/10 flex items-center justify-center shrink-0">
-                  <item.icon size={18} className="text-[#000]" />
+                <div className="h-11 w-11 rounded-xl bg-[#170b33]/10 flex items-center justify-center shrink-0">
+                  <item.icon size={18} className="text-[#170b33]" />
                 </div>
                 <div>
-                  <p className="text-xs text-[#777] mb-1 font-medium">{item.label}</p>
+                  <p className="text-xs text-[#7c6699] mb-1 font-medium">{item.label}</p>
                   {item.href ? (
-                    <a href={item.href} className="font-semibold text-sm text-[#000] hover:text-[#000] transition-colors">
+                    <a href={item.href} className="font-semibold text-sm text-[#170b33] hover:text-[#170b33] transition-colors">
                       {item.value}
                     </a>
                   ) : (
-                    <p className="font-semibold text-sm text-[#000]">{item.value}</p>
+                    <p className="font-semibold text-sm text-[#170b33]">{item.value}</p>
                   )}
                 </div>
               </div>
@@ -74,14 +74,14 @@ export function Contact() {
 
             {/* Social */}
             <div>
-              <p className="text-xs text-[#777] mb-3 font-medium">Find us on</p>
+              <p className="text-xs text-[#7c6699] mb-3 font-medium">Find us on</p>
               <div className="flex gap-3">
                 {socialLinks.map(({ label, href, svg }) => (
                   <a
                     key={label}
                     href={href}
                     aria-label={label}
-                    className="h-10 w-10 rounded-xl border border-[#e5e5e5] bg-[#fafafa] flex items-center justify-center text-[#555] hover:text-[#000] hover:border-[#aaa] hover:bg-[#f5f5f5] transition-colors"
+                    className="h-10 w-10 rounded-xl border border-[#e4dbf5] bg-[#faf8fd] flex items-center justify-center text-[#5d4483] hover:text-[#170b33] hover:border-[#a695c2] hover:bg-[#f2ecfa] transition-colors"
                   >
                     {svg}
                   </a>
@@ -90,9 +90,9 @@ export function Contact() {
             </div>
 
             {/* Consultation card */}
-            <div className="rounded-2xl border border-[#e5e5e5] bg-[#fafafa] p-6">
-              <h3 className="font-bold mb-2 text-sm text-[#000]">Free Consultation</h3>
-              <p className="text-xs text-[#555] leading-relaxed">
+            <div className="rounded-2xl border border-[#e4dbf5] bg-[#faf8fd] p-6">
+              <h3 className="font-bold mb-2 text-sm text-[#170b33]">Free Consultation</h3>
+              <p className="text-xs text-[#5d4483] leading-relaxed">
                 Book a free 30-minute call to explore what we can build together. We&apos;ll understand your project, propose a solution, and offer flexible beginner-friendly rates.
               </p>
             </div>
@@ -100,43 +100,43 @@ export function Contact() {
 
           {/* Form */}
           <div className="lg:col-span-3 animate-fade-in-right [animation-delay:150ms]">
-            <form className="rounded-2xl border border-[#e5e5e5] bg-[#fafafa] p-7 sm:p-8 space-y-5">
+            <form className="rounded-2xl border border-[#e4dbf5] bg-[#faf8fd] p-7 sm:p-8 space-y-5">
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-semibold text-[#000] mb-2">Full Name</label>
+                  <label htmlFor="name" className="block text-xs font-semibold text-[#170b33] mb-2">Full Name</label>
                   <input
                     type="text"
                     id="name"
                     placeholder="Your name"
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e5e5e5] text-sm text-[#000] placeholder:text-[#aaa] focus:outline-none focus:border-[#000] focus:ring-2 focus:ring-[#000]/15 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e4dbf5] text-sm text-[#170b33] placeholder:text-[#a695c2] focus:outline-none focus:border-[#170b33] focus:ring-2 focus:ring-[#170b33]/15 transition-colors"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-xs font-semibold text-[#000] mb-2">Email Address</label>
+                  <label htmlFor="email" className="block text-xs font-semibold text-[#170b33] mb-2">Email Address</label>
                   <input
                     type="email"
                     id="email"
                     placeholder="you@example.com"
-                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e5e5e5] text-sm text-[#000] placeholder:text-[#aaa] focus:outline-none focus:border-[#000] focus:ring-2 focus:ring-[#000]/15 transition-colors"
+                    className="w-full px-4 py-3 rounded-xl bg-white border border-[#e4dbf5] text-sm text-[#170b33] placeholder:text-[#a695c2] focus:outline-none focus:border-[#170b33] focus:ring-2 focus:ring-[#170b33]/15 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-xs font-semibold text-[#000] mb-2">Subject</label>
+                <label htmlFor="subject" className="block text-xs font-semibold text-[#170b33] mb-2">Subject</label>
                 <input
                   type="text"
                   id="subject"
                   placeholder="Project type or inquiry"
-                  className="w-full px-4 py-3 rounded-xl bg-white border border-[#e5e5e5] text-sm text-[#000] placeholder:text-[#aaa] focus:outline-none focus:border-[#000] focus:ring-2 focus:ring-[#000]/15 transition-colors"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-[#e4dbf5] text-sm text-[#170b33] placeholder:text-[#a695c2] focus:outline-none focus:border-[#170b33] focus:ring-2 focus:ring-[#170b33]/15 transition-colors"
                 />
               </div>
 
               <div>
-                <label htmlFor="budget" className="block text-xs font-semibold text-[#000] mb-2">Estimated Budget</label>
+                <label htmlFor="budget" className="block text-xs font-semibold text-[#170b33] mb-2">Estimated Budget</label>
                 <select
                   id="budget"
-                  className="w-full px-4 py-3 rounded-xl bg-white border border-[#e5e5e5] text-sm text-[#555] focus:outline-none focus:border-[#000] focus:ring-2 focus:ring-[#000]/15 transition-colors appearance-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-[#e4dbf5] text-sm text-[#5d4483] focus:outline-none focus:border-[#170b33] focus:ring-2 focus:ring-[#170b33]/15 transition-colors appearance-none"
                 >
                   <option value="">Select a range</option>
                   <option>Under ₹50,000</option>
@@ -147,12 +147,12 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-semibold text-[#000] mb-2">Message</label>
+                <label htmlFor="message" className="block text-xs font-semibold text-[#170b33] mb-2">Message</label>
                 <textarea
                   id="message"
                   rows={5}
                   placeholder="Tell us about your project, goals, and timeline..."
-                  className="w-full px-4 py-3 rounded-xl bg-white border border-[#e5e5e5] text-sm text-[#000] placeholder:text-[#aaa] focus:outline-none focus:border-[#000] focus:ring-2 focus:ring-[#000]/15 transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl bg-white border border-[#e4dbf5] text-sm text-[#170b33] placeholder:text-[#a695c2] focus:outline-none focus:border-[#170b33] focus:ring-2 focus:ring-[#170b33]/15 transition-colors resize-none"
                 />
               </div>
 

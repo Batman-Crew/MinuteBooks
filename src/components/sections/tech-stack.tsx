@@ -32,7 +32,7 @@ export function TechStack() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center animate-fade-in-up">
           <span className="tag-pill mb-4 inline-block">Technologies</span>
-          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#000]">
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#170b33]">
             Our Tech Stack
           </h2>
         </div>
@@ -46,10 +46,10 @@ export function TechStack() {
           {[...row1, ...row1].map((tech, i) => (
             <div
               key={`r1-${i}`}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e5e5e5] bg-[#fafafa] whitespace-nowrap hover:border-[#aaa] hover:bg-[#f5f5f5] transition-colors cursor-default"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e4dbf5] bg-[#faf8fd] whitespace-nowrap hover:border-[#a695c2] hover:bg-[#f2ecfa] transition-colors cursor-default"
             >
               <span className="text-sm">{tech.emoji}</span>
-              <span className="text-sm text-[#555] font-medium">{tech.name}</span>
+              <span className="text-sm text-[#5d4483] font-medium">{tech.name}</span>
             </div>
           ))}
         </div>
@@ -63,10 +63,10 @@ export function TechStack() {
           {[...row2, ...row2].map((tech, i) => (
             <div
               key={`r2-${i}`}
-              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e5e5e5] bg-[#fafafa] whitespace-nowrap hover:border-[#aaa] hover:bg-[#f5f5f5] transition-colors cursor-default"
+              className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-[#e4dbf5] bg-[#faf8fd] whitespace-nowrap hover:border-[#a695c2] hover:bg-[#f2ecfa] transition-colors cursor-default"
             >
               <span className="text-sm">{tech.emoji}</span>
-              <span className="text-sm text-[#555] font-medium">{tech.name}</span>
+              <span className="text-sm text-[#5d4483] font-medium">{tech.name}</span>
             </div>
           ))}
         </div>

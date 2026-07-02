@@ -1,5 +1,9 @@
+"use client";
+
+import Image from "next/image";
 import Link from "next/link";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, Mail } from "lucide-react";
+import { Magnetic } from "@/components/ui/magnetic-button";
 
 const socialLinks = [
   {
@@ -21,51 +25,65 @@ const socialLinks = [
     ),
   },
   {
-    label: "GitHub",
+    label: "YouTube",
     href: "#",
     svg: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
-        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
       </svg>
     ),
   },
 ];
 
 const footerLinks = {
-  Company: [
-    { href: "#about", label: "About Us" },
-    { href: "#careers", label: "Careers" },
-    { href: "#blog", label: "Blog" },
-    { href: "#contact", label: "Contact" },
-  ],
-  Services: [
-    { href: "#services", label: "Web App Development" },
-    { href: "#services", label: "Mobile Applications" },
-    { href: "#services", label: "Website Creation" },
-    { href: "#services", label: "AI Integration" },
-    { href: "#services", label: "Database Design" },
-  ],
-  Resources: [
-    { href: "#portfolio", label: "Case Studies" },
-    { href: "#process", label: "How We Work" },
+  Product: [
+    { href: "#features", label: "Features" },
+    { href: "#dashboard", label: "Dashboard Demo" },
+    { href: "#pricing", label: "Pricing" },
     { href: "#industries", label: "Industries" },
-    { href: "#blog", label: "Tech Blog" },
+  ],
+  Modules: [
+    { href: "#pos", label: "POS" },
+    { href: "#inventory", label: "Inventory" },
+    { href: "#accounting", label: "Accounting" },
+    { href: "#gst", label: "GST Filing" },
+    { href: "#payroll", label: "Payroll" },
+  ],
+  Company: [
+    { href: "#faq", label: "FAQ" },
+    { href: "#testimonials", label: "Customer Stories" },
+    { href: "#contact", label: "Contact" },
+    { href: "#", label: "Careers" },
   ],
 };
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#e5e5e5] bg-[#fafafa]">
-      {/* Pre-footer CTA strip */}
-      <div className="border-b border-[#e5e5e5] bg-white">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-6">
+    <footer className="border-t border-[#e4dbf5] bg-[#faf8fd]">
+      {/* Newsletter strip */}
+      <div className="border-b border-[#e4dbf5] bg-white">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <p className="text-lg font-bold text-[#000] mb-1">Experience the difference.</p>
-            <p className="text-sm text-[#555]">Let&apos;s build something great together.</p>
+            <p className="font-heading text-lg font-bold text-[#170b33] mb-1">Stay ahead of GST deadlines.</p>
+            <p className="text-sm text-[#5d4483]">One email a month — product updates, compliance changes, no spam.</p>
           </div>
-          <Link href="#contact" className="btn-primary shrink-0">
-            Schedule a demo <ArrowRight size={14} />
-          </Link>
+          <form
+            onSubmit={(e) => e.preventDefault()}
+            className="flex w-full max-w-sm items-center gap-2 rounded-full border border-[#e4dbf5] bg-[#F8F9FC] p-1.5 shrink-0"
+          >
+            <Mail size={16} className="text-[#7c6699] ml-2 shrink-0" />
+            <input
+              type="email"
+              required
+              placeholder="you@business.com"
+              className="w-full bg-transparent text-sm text-[#170b33] placeholder:text-[#a695c2] outline-none px-1"
+            />
+            <Magnetic strength={0.2}>
+              <button type="submit" className="btn-primary py-2 px-4 text-xs shrink-0">
+                Subscribe
+              </button>
+            </Magnetic>
+          </form>
         </div>
       </div>
 
@@ -73,14 +91,13 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-10">
           {/* Brand column */}
           <div className="col-span-2 md:col-span-4 lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2.5 mb-5">
-              <div className="h-8 w-8 rounded-lg bg-[#000] flex items-center justify-center shadow-[0_0_12px_rgba(125,59,113,0.3)]">
-                <span className="text-white font-bold text-sm">MB</span>
-              </div>
-              <span className="text-base font-bold tracking-tight text-[#000]">Minute Books</span>
+            <Link href="/" className="flex items-center gap-2 mb-5">
+              <Image src="/logo-mark.png" alt="Minute Books" width={32} height={32} className="h-8 w-8 rounded-lg shadow-[0_0_12px_rgba(124,58,237,0.35)]" />
+              <span className="font-heading text-base font-bold tracking-tight text-[#170b33]">Minute Books</span>
             </Link>
-            <p className="text-sm text-[#555] leading-relaxed mb-6 max-w-xs">
-              Transforming ideas into reality. We build custom digital solutions that empower brands in the digital era — from Bangalore to the world.
+            <p className="text-sm text-[#5d4483] leading-relaxed mb-6 max-w-xs">
+              Cloud accounting, POS, GST, and payroll — one beautiful platform
+              built for Indian businesses. Accounting made simple.
             </p>
             <div className="flex gap-3">
               {socialLinks.map(({ label, href, svg }) => (
@@ -88,7 +105,7 @@ export function Footer() {
                   key={label}
                   href={href}
                   aria-label={label}
-                  className="h-9 w-9 rounded-lg border border-[#e5e5e5] bg-white flex items-center justify-center text-[#555] hover:text-[#000] hover:border-[#aaa] hover:bg-[#f5f5f5] transition-colors"
+                  className="h-9 w-9 rounded-lg border border-[#e4dbf5] bg-white flex items-center justify-center text-[#5d4483] hover:text-[#170b33] hover:border-[#a695c2] hover:bg-[#f2ecfa] transition-colors"
                 >
                   {svg}
                 </a>
@@ -99,11 +116,11 @@ export function Footer() {
           {/* Link columns */}
           {Object.entries(footerLinks).map(([title, links]) => (
             <div key={title}>
-              <h3 className="text-xs font-bold uppercase tracking-widest mb-4 text-[#000]">{title}</h3>
+              <h3 className="text-xs font-bold uppercase tracking-widest mb-4 text-[#170b33]">{title}</h3>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
-                    <Link href={link.href} className="text-sm text-[#555] hover:text-[#000] transition-colors font-medium">
+                    <Link href={link.href} className="text-sm text-[#5d4483] hover:text-[#170b33] transition-colors font-medium">
                       {link.label}
                     </Link>
                   </li>
@@ -114,30 +131,24 @@ export function Footer() {
         </div>
 
         {/* Contact row */}
-        <div className="mt-12 pt-8 border-t border-[#e5e5e5] grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
-          {[
-            { icon: MapPin, value: "Bangalore, India", href: null },
-          ].map((item) => (
-            <div key={item.value} className="flex items-center gap-2.5 text-sm text-[#555]">
-              <item.icon size={14} className="shrink-0 text-[#000]" />
-              {item.href ? (
-                <a href={item.href} className="hover:text-[#000] transition-colors truncate font-medium">{item.value}</a>
-              ) : (
-                <span className="font-medium">{item.value}</span>
-              )}
+        <div className="mt-12 pt-8 border-t border-[#e4dbf5] grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+          {[{ icon: MapPin, value: "Bangalore, India", href: null }].map((item) => (
+            <div key={item.value} className="flex items-center gap-2.5 text-sm text-[#5d4483]">
+              <item.icon size={14} className="shrink-0 text-[#170b33]" />
+              <span className="font-medium">{item.value}</span>
             </div>
           ))}
         </div>
 
         {/* Bottom bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-[#e5e5e5]">
-          <p className="text-xs text-[#777]">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-6 border-t border-[#e4dbf5]">
+          <p className="text-xs text-[#7c6699]">
             &copy; {new Date().getFullYear()} Minute Books. All rights reserved.
           </p>
-          <div className="flex gap-5 text-xs text-[#777]">
-            <Link href="#" className="hover:text-[#000] transition-colors">Privacy Policy</Link>
-            <Link href="#" className="hover:text-[#000] transition-colors">Terms of Service</Link>
-            <Link href="#" className="hover:text-[#000] transition-colors">Cookie Policy</Link>
+          <div className="flex gap-5 text-xs text-[#7c6699]">
+            <Link href="#" className="hover:text-[#170b33] transition-colors">Privacy Policy</Link>
+            <Link href="#" className="hover:text-[#170b33] transition-colors flex items-center gap-1">Terms of Service</Link>
+            <Link href="#" className="hover:text-[#170b33] transition-colors">Cookie Policy</Link>
           </div>
         </div>
       </div>

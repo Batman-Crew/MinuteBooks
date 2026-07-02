@@ -58,45 +58,45 @@ export function Careers() {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-20">
           <div className="animate-fade-in-left">
             <span className="tag-pill mb-4 inline-block">Careers</span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#000] mb-5">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#170b33] mb-5">
               Join the team
               <br />
               <span className="gradient-text-accent">building tomorrow.</span>
             </h2>
-            <p className="text-[#555] text-lg leading-relaxed mb-6">
+            <p className="text-[#5d4483] text-lg leading-relaxed mb-6">
               We&apos;re a small, mighty team of engineers and designers who love
               shipping products that make a difference. If you&apos;re passionate
               about great code and great craft — we want to hear from you.
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
               {perks.map((perk) => (
-                <div key={perk.label} className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-[#e5e5e5] bg-[#fafafa] text-sm">
+                <div key={perk.label} className="flex items-center gap-2 px-3 py-2.5 rounded-xl border border-[#e4dbf5] bg-[#faf8fd] text-sm">
                   <span className="text-base">{perk.icon}</span>
-                  <span className="text-[#555] text-xs font-medium">{perk.label}</span>
+                  <span className="text-[#5d4483] text-xs font-medium">{perk.label}</span>
                 </div>
               ))}
             </div>
           </div>
 
           <div className="relative animate-fade-in-right [animation-delay:150ms]">
-            <div className="relative rounded-2xl overflow-hidden aspect-4/3 shadow-xl shadow-[#000]/12">
+            <div className="relative rounded-2xl overflow-hidden aspect-4/3 shadow-xl shadow-[#170b33]/12">
               <Image
                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
                 alt="Minute Books team culture"
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-linear-to-br from-[#000]/15 to-[#111]/10" />
+              <div className="absolute inset-0 bg-linear-to-br from-[#170b33]/15 to-[#1f1140]/10" />
             </div>
-            <div className="absolute -bottom-5 -left-4 sm:-left-6 bg-white border border-[#e5e5e5] rounded-2xl px-5 py-4 shadow-lg shadow-[#000]/10">
-              <p className="text-lg font-bold text-[#000]">4 open positions</p>
-              <p className="text-xs text-[#555] mt-0.5">Remote-friendly roles</p>
+            <div className="absolute -bottom-5 -left-4 sm:-left-6 bg-white border border-[#e4dbf5] rounded-2xl px-5 py-4 shadow-lg shadow-[#170b33]/10">
+              <p className="text-lg font-bold text-[#170b33]">4 open positions</p>
+              <p className="text-xs text-[#5d4483] mt-0.5">Remote-friendly roles</p>
             </div>
           </div>
         </div>
 
         {/* Job listings */}
-        <h3 className="text-xl font-bold mb-6 text-[#000] animate-fade-in-up">Open Positions</h3>
+        <h3 className="text-xl font-bold mb-6 text-[#170b33] animate-fade-in-up">Open Positions</h3>
         <div className="flex flex-col gap-4">
           {openings.map((job, i) => (
             <div
@@ -107,17 +107,17 @@ export function Careers() {
               <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <h4 className="font-bold text-base text-[#000]">{job.title}</h4>
+                    <h4 className="font-bold text-base text-[#170b33]">{job.title}</h4>
                     <span className="tag-pill text-xs">{job.type}</span>
                   </div>
-                  <div className="flex flex-wrap gap-4 mb-3 text-xs text-[#555]">
+                  <div className="flex flex-wrap gap-4 mb-3 text-xs text-[#5d4483]">
                     <span className="flex items-center gap-1"><MapPin size={11} /> {job.location}</span>
                     <span className="flex items-center gap-1"><Briefcase size={11} /> {job.experience}</span>
                   </div>
-                  <p className="text-sm text-[#555] leading-relaxed mb-4">{job.description}</p>
+                  <p className="text-sm text-[#5d4483] leading-relaxed mb-4">{job.description}</p>
                   <div className="flex flex-wrap gap-1.5">
                     {job.tags.map((tag) => (
-                      <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs border border-[#e5e5e5] bg-white text-[#555]">
+                      <span key={tag} className="px-2.5 py-0.5 rounded-full text-xs border border-[#e4dbf5] bg-white text-[#5d4483]">
                         {tag}
                       </span>
                     ))}
@@ -134,9 +134,9 @@ export function Careers() {
           ))}
         </div>
 
-        <p className="text-center text-[#555] text-sm mt-10 animate-fade-in-up">
+        <p className="text-center text-[#5d4483] text-sm mt-10 animate-fade-in-up">
           Don&apos;t see a fit?{" "}
-          <a href="#contact" className="text-[#000] hover:text-[#222] font-semibold hover:underline transition-colors">
+          <a href="#contact" className="text-[#170b33] hover:text-[#2e1a56] font-semibold hover:underline transition-colors">
             Get in touch
           </a>{" "}
           and send us your resume.
